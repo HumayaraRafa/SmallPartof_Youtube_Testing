@@ -1,0 +1,21 @@
+package WebElements;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class InputBox_ButtonClick {
+	public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
+		
+		//url_visit
+		driver.get("https://youtube.com/results?search_query=Bangladesh");
+		
+		//Input Box
+		driver.findElement(By.id("search")).sendKeys("Bangladesh");
+	}
+
+}
